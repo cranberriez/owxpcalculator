@@ -32,8 +32,9 @@ function calcLevels() {
     let levels_needed = (want_level - curr_level) - challenge_levels
     document.getElementById("chal_possible_levels").innerText = curr_level + challenge_levels
 
+    let daily_games = ((xp_values.game_avg * 3) * 3) * days_remaining
     let games_needed = (levels_needed * 10000) / xp_values.game_avg
-    document.getElementById("games_needed").innerText = games_needed > 0 ? Math.ceil( games_needed ) : 0
+    document.getElementById("games_needed").innerText = games_needed > 0 ? Math.ceil( games_needed - daily_games ) : 0
 
     document.getElementById("games_per_day").innerText = games_needed > 0 ? Math.ceil(games_needed / days_remaining) : 0
 }
