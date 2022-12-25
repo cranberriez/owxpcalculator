@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>OW XP Calculator</title>
+</head>
+    <body>
+        <form>
+            <p>Days left: <span id="days_remaining"></span></p>
+            <div>
+                <input oninput="calcLevels()" type="text" name="curr_level" id="curr_level" value="0">
+                <label for="curr_level">Current Level</label>
+            </div>
+            <div>
+                <input oninput="calcLevels()" type="text" name="want_level" id="want_level" value="0">
+                <label for="curr_level">Wanted Level</label>
+            </div>
+            <div>
+                <input onChange="calcLevels()" type="checkbox" default=false name="daily_done" id="daily_done">
+                <label for="daily_done">Finished Current Dailies</label>
+            </div>
+            <div>
+                <input onChange="calcLevels()" type="checkbox" default=false name="weekly_done" id="weekly_done">
+                <label for="weekly_done">Finished Current Weeklies</label>
+            </div>
+
+            <p>Highest Level Possible (All Weeklies + Dailies): <span id="chal_possible_levels"></span></p>
+            <p>Est. Total Games Needed: <span id="games_needed">0</span></p>
+            <p>Est. Games Per Day: <span id="games_per_day">0</span></p>
+        </form>
+        <script src="index.js"></script>
+    </body>
+</html>
