@@ -7,52 +7,49 @@
 body {
     width: 100vw;
     height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-color: #121212;
     color: #fff;
     font-family: sans-serif;
-    font-size: 24px;
+    font-size: 16px;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: fit-content;
-    margin-bottom: 15vh;
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 10px;
+h3 {
+    font-weight: normal;
 }
 
-label {
-    display: inline;
-    width: 80%;
+.week-to-week {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    background: #222;
+    border-radius: 5px;
 }
 
-input {
-    display: inline;
-    width: 20%;
-    box-sizing: border-box;
-    margin-right: 10px;
+.week-to-week:first-child {
+    background: none;
 }
 
-input[type="checkbox"] {
-    width: fit-content;
-    height: 18px;
-    margin-right: 10px;
-}
-
-p {
-    width: fit-content;
-    display: inline;
-}
-
-div {
-    width: 100%;
-    display: flex;
-    align-items: center;
+.week-to-week:not(:first-child) {
     margin-bottom: 10px;
+}
+
+.week-to-week p {
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    padding: 10px 0;
+}
+
+.week-to-week .tier {
+    font-size: 1.5rem;
 }

@@ -8,30 +8,22 @@
     <title>OW XP Calculator</title>
 </head>
     <body>
-        <form>
-            <p>Days left: <span id="days_remaining"></span></p>
-            <div>
-                <input oninput="calcLevels()" type="text" name="curr_level" id="curr_level" value="0">
-                <label for="curr_level">Current Level</label>
-            </div>
-            <div>
-                <input oninput="calcLevels()" type="text" name="want_level" id="want_level" value="0">
-                <label for="curr_level">Wanted Level</label>
-            </div>
-            <div>
-                <input onChange="calcLevels()" type="checkbox" default=false name="daily_done" id="daily_done">
-                <label for="daily_done">Finished Current Dailies</label>
-            </div>
-            <div>
-                <input onChange="calcLevels()" type="checkbox" default=false name="weekly_done" id="weekly_done">
-                <label for="weekly_done">Finished Current Weeklies</label>
-            </div>
+        <div id="week_to_week" class="menu">
+            <h2 id="days_remaining_cont"><span id="days_remaining"></span> Days Remaining</h2>
+            <p><span id="total_days"></span> Total Days</p>
+            <ul id="week_list">
+                <li class="week-to-week">
+                    <p class="tier">Tier</p>
+                    <p class="week">Week</p>
+                    <p class="days-left">Days Remaining</p>
+                </li>
+            </ul>
+        </div>
 
-            <p>Highest Level Possible (All Weeklies + Dailies): <span id="chal_possible_levels"></span></p>
-            <p>Est. Total Games Needed: <span id="games_needed">0</span></p>
-            <p>Assuming 3 games a day for dailies</p>
-            <p>Est. Additional Games Per Day: <span id="games_per_day">0</span></p>
-        </form>
+        <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
         <script src="index1.js"></script>
     </body>
 </html>
