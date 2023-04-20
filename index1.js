@@ -20,10 +20,11 @@ $(function() {
     $("#days_remaining").text(days_remaining)
     $("#total_days").text(total_days)
 
-    for (let i = 0; i < total_weeks - 1; i++) {
+    for (let i = 0; i < total_weeks; i++) {
         $("#week_list").append(
             `<li class="week-to-week">
                 <p class="tier">${bp_per_week * (i + 1)}</p>
+                <p class="xp-req">${(bp_per_week * (i + 1) * 10000)}</p>
                 <p class="week">${i + 1}</p>
                 <p class="days-left">${total_days - ((7 * i) + 1)}</p>
             </li>`

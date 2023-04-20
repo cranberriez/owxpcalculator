@@ -18,6 +18,11 @@ body {
     font-size: 16px;
 }
 
+h1, #days_remaining_cont, #total_days_cont {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 h3 {
     font-weight: normal;
 }
@@ -25,7 +30,7 @@ h3 {
 .week-to-week {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
 
     background: #222;
