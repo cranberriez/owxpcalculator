@@ -48,6 +48,7 @@ h3 {
 .week-to-week p {
     text-align: center;
 
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -57,4 +58,9 @@ h3 {
 
 .week-to-week .tier {
     font-size: 1.5rem;
+}
+
+.week-to-week.active {
+    background: #A9f5f3;
+    color: black;
 }
