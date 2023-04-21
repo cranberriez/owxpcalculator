@@ -15,6 +15,7 @@ $(function() {
     let storedValue = localStorage.getItem("OWXPtoggleSwitchValue");
     if (storedValue !== null) {
         toggleSwitch.prop("checked", storedValue === "true");
+        stateElement.text(storedValue === "true" ? "Level 200" : "Level 80");
     }
 
     // Add event listener to the toggle switch
