@@ -13,14 +13,21 @@
             <h2 id="days_remaining_cont"><span id="days_remaining"></span> Days Remaining</h2>
             <p id="total_days_cont"><span id="total_days"></span> Total Days</p>
             <ul id="week_list">
-                <li class="week-to-week">
+                <li class="week week-header">
                     <p class="tier">Tier</p>
-                    <p class="week">Xp Required</p>
-                    <p class="week">Week</p>
+                    <p class="xp-req">Xp Required</p>
+                    <p class="week-label">Week</p>
                     <p class="days-left">Days Remaining</p>
                 </li>
             </ul>
-            <p>Shown above is the tier you be at the end of that week to reach level 80 by the end of the season.</p>
+            <p class="explanation">Shown above is the tier you be at the end of that week to reach level 80 by the end of the season.</p>
+            <p class="max-level-switch">
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider"></span>
+                </label>
+                <span id="level-switch-label">Level 80</span>
+            </p>
         </div>
 
         <script
