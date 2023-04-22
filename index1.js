@@ -7,15 +7,19 @@ let xp_values = {
 }
 
 $(function() {
-    set_week_to_week(false)
 
     let toggleSwitch = $("#toggle");
     let stateElement = $("#level-switch-label");
 
     let storedValue = localStorage.getItem("OWXPtoggleSwitchValue");
     if (storedValue !== null) {
-        toggleSwitch.prop("checked", storedValue === "true");
-        stateElement.text(storedValue === "true" ? "Level 200" : "Level 80");
+        let level_200 = storedValue === "true"
+        toggleSwitch.prop("checked", level_200);
+        set_week_to_week(level_200)
+        stateElement.text(level_200 ? "Level 200" : "Level 80");
+    }
+    else {
+        set_week_to_week(false)
     }
 
     // Add event listener to the toggle switch
