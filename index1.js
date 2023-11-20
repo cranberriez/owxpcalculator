@@ -38,7 +38,7 @@ function set_week_to_week(level_200) {
     let curr_date = new Date()
     let season_start_unix = 1681236000
     let season_start = new Date(season_start_unix * 1000)
-    let season_end_unix = 1686592800
+    let season_end_unix = 1701679205
     let season_end = new Date(season_end_unix * 1000)
     let days_remaining = Math.ceil( Math.abs(curr_date - season_end) / (1000 * 60 * 60 * 24) )
     let total_days = Math.ceil(Math.abs(season_start - season_end) / (1000 * 60 * 60 * 24) + 2)
